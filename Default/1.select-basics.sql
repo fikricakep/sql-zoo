@@ -1,3 +1,5 @@
+https://sqlzoo.net/wiki/SELECT_basics
+
 # Modify it to show the population of Germany
 
 SELECT population FROM world
