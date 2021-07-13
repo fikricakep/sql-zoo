@@ -59,3 +59,21 @@ WHERE gdp > 1000000000000
 SELECT name, capital
   FROM world
  WHERE len(name) = len(capital)
+
+# MATCHING NAME AND CAPITAL: Show the name and the capital where the first letters of each match. Don't include countries where the name and the capital are the same word.
+
+SELECT name, capital
+FROM world
+WHERE LEFT(name,1) IN (LEFT(capital,1))
+AND name <> (capital)
+
+# ALL THE VOWELS: Find the country that has all the vowels and no spaces in its name.
+
+SELECT name
+   FROM world
+WHERE name NOT LIKE '% %'
+AND name LIKE '%a%'
+AND name LIKE '%i%'
+AND name LIKE '%u%'
+AND name LIKE '%e%'
+AND name LIKE '%o%'
